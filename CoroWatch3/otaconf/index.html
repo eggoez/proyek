@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CoroWatch Telu</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	 <meta name="robots" content="noindex,follow">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  </head>
+  <body>
+    <div data-role="page" id="main">
+      <div data-role="header" class="jqm-header">
+        <h1>CoroWatch 3</h1>
+      </div>
+
+      <div data-role="content">
+
+<div data-role="collapsible-set" data-theme="c" data-content-theme="d" data-mini="false">
+
+ <div data-role="collapsible">
+        <h3>Tampilan & Nuansa</h3>
+
+<fieldset data-role="controlgroup" data-mini="true">
+    <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+   <!-- <legend>Word Pack</legend>
+  <i>Change any of these in the translation section.</i>
+        <input name="key1" id="key1-0" value="0" checked="checked" type="radio">
+        <label for="key1-0">Sober (light words, like "frikken")</label>
+        <input name="key1" id="key1-1" value="1" type="radio">
+        <label for="key1-1">Tipsy (mild words, like "shittin")</label>
+        <input name="key1" id="key1-2" value="2" type="radio">
+        <label for="key1-2">Wasted (intense words, like "fucking")</label>
+</fieldset>
+-->
+<fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+    <legend>Tema</legend>
+        <input name="key0" id="key0-0" data-type="int" value="0" checked="checked" type="radio">
+        <label for="key0-0">Peteng</label>
+        <input name="key0" id="key0-1" value="1" type="radio">
+        <label for="key0-1">Padang</label>
+</fieldset>
+<fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+    <legend>Progressive Drunken'ness</legend>
+    <i>Enabling this will change how drunk the watchface is depending on the time of day.</i>
+        <input name="key2" id="key2-0" value="0" checked="checked" type="radio">
+        <label for="key2-0">Off</label>
+        <input name="key2" id="key2-1" value="1" type="radio">
+        <label for="key2-1">On</label>
+</fieldset>
+
+<fieldset data-role="controlgroup" data-mini="true">
+    <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+    <legend>Animations</legend>
+  <i>Occurs when the time changes.</i>
+        <input name="key3" id="key3-0" value="0" checked="checked" type="radio">
+        <label for="key3-0">Classic (slide in from left)</label>
+        <input name="key3" id="key3-1" value="1" type="radio">
+        <label for="key3-1">Verticle</label>
+        <input name="key3" id="key3-2" value="2" type="radio">
+        <label for="key3-2">Wacky</label>
+        <input name="key3" id="key3-3" value="3" type="radio">
+        <label for="key3-3">Shake up</label>
+        <input name="key3" id="key3-4" value="4" type="radio">
+        <label for="key3-4">Nothing (disabled)</label>
+</fieldset>
+
+<fieldset data-role="controlgroup" data-mini="true">
+    <div class="ui-field-contain">
+      <label for="updateFreqKey" id="label_updateFreqKey">Swear word update frequency (minutes)</label>
+      <input name="updateFreqKey" id="trans_updateFreqKey" placeholder="5" value="5" data-mini="true" type="text" maxlength="2">
+    </div>
+</fieldset>
+
+    </div>
+<div data-role="collapsible">
+        <h3>Date/Time</h3>
+
+<fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+    <legend>Date Format</legend>
+    	<input name="key4" id="key4-3" value="3" checked="checked" type="radio">
+        <label for="key4-3">[swear], it's [weekday]</label>
+        <input name="key4" id="key4-0" value="0" type="radio">
+        <label for="key4-0">DD/MM/YY</label>
+        <input name="key4" id="key4-1" value="1" type="radio">
+        <label for="key4-1">MM/DD/YY</label>
+	<input name="key4" id="key4-2" value="2" type="radio">
+        <label for="key4-2">June 8th, 2010</label>
+</fieldset>
+
+<fieldset data-role="controlgroup" data-mini="true">
+    <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+    <legend>Seconds</legend>
+    <i>Seconds will show up in the top right corner of the screen. Animations do not apply to seconds.</i>
+	      <input name="key5" id="key5-0" value="0" checked="checked" type="radio">
+        <label for="key5-0">Off</label>
+        <input name="key5" id="key5-1" value="1" type="radio">
+        <label for="key5-1">On</label>
+</fieldset>
+
+</div>
+
+    <div data-role="collapsible">
+        <h3>Features</h3>
+
+<fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+    <legend>Shake Action</legend>
+        <input name="key6" id="key6-1" value="1" type="radio">
+        <label for="key6-1">Change swear word</label>
+        <input name="key6" id="key6-0" value="0" type="radio" checked="checked">
+        <label for="key6-0">Launch extra screen</label>
+        <input name="key6" id="key6-2" value="2" type="radio">
+        <label for="key6-2">Disguise Drunk O' Clock as Simply Clean</label>
+</fieldset>
+
+<fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+    <legend>Battery Bar</legend>
+	<i>If enabled, a white bar will be displayed below the bottom slot indicating the watch's battery level.</i>
+        <input name="key7" id="key7-1" value="1" checked="checked" type="radio">
+        <label for="key7-1">On</label>
+        <input name="key7" id="key7-0" value="0" type="radio">
+        <label for="key7-0">Off</label>
+</fieldset>
+
+<fieldset data-role="controlgroup" data-mini="true">
+    <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+    <legend>Bluetooth reconnect alert</legend>
+        <input name="key8" id="key8-0" value="0" checked="checked" type="radio">
+        <label for="key8-0">Off</label>
+        <input name="key8" id="key8-1" value="1" type="radio">
+        <label for="key8-1">On</label>
+</fieldset>
+
+<fieldset data-role="controlgroup" data-mini="true">
+    <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+    <legend>Bluetooth disconnect alert</legend>
+        <input name="key9" id="key9-0" value="0" checked="checked" type="radio">
+        <label for="key9-0">Off</label>
+        <input name="key9" id="key9-1" value="1" type="radio">
+        <label for="key9-1">On</label>
+</fieldset>
+
+<fieldset data-role="controlgroup" data-mini="true">
+    <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+    <legend>Bottom Slot</legend>
+	<i>Insert X into the bottom line, below the time.</i>
+        <input name="key10" id="key10-0" value="0" checked="checked" type="radio">
+        <label for="key10-0">Date (change format in 'Date/Time')</label>
+        <input name="key10" id="key10-1" value="1" type="radio">
+        <label for="key10-1">Bluetooth status</label>
+        <input name="key10" id="key10-2" value="2" type="radio">
+        <label for="key10-2">Custom text</label>
+        <input name="key10" id="key10-3" value="3" type="radio">
+        <label for="key10-3">Temperature</label>
+        <input name="key10" id="key10-4" value="4" type="radio">
+        <label for="key10-4">Nothing (hides)</label>
+</fieldset>
+
+<fieldset data-role="controlgroup" data-mini="true">
+ <legend><h0>Custom Slot Text:</h0></legend>
+    <div class="ui-field-contain">
+      <input name="key11" id="slotcustomtext" placeholder="Enter custom slot text" value="fedoratricks.com" data-mini="true" type="text" maxlength="21">
+    </div>
+</fieldset>
+
+    </div>
+    <div data-role="collapsible">
+        <h3>Weather</h3>
+
+<fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+    <legend>Temperature Preference</legend>
+        <input name="key12" id="key12-0" value="0" checked="checked" type="radio">
+        <label for="key12-0">Celsius</label>
+		    <input name="key12" id="key12-1" value="1" type="radio">
+        <label for="key12-1">Fahrenheit</label>
+</fieldset>
+
+<i>If you want a custom location, enter it in below.<br>
+Otherwise, leave it blank and Drunk O' Clock will use location.</i>
+
+	<div class="ui-field-contain">
+      <label for="key13" id="label_key13"><b>Custom location:</b></label>
+      <input name="key13" id="trans_key13" placeholder="Toronto" value="" data-mini="true" type="text" maxlength="24">
+    </div>
+
+    </div>
+    
+<div data-role="collapsible" >
+        <h3>Word Translations</h3>
+        <i>Words are limited to 16 characters currently, and the watchface will resize the font accordingly. These words are only
+          applied to the main time, and not anywhere else in the watchface.</i>
+          <strong>Unsupported characters: - _ . ! ~ * ' ( )</strong><br>
+          Using these might break your settings and/or not send them.
+        <h2>Sober</h2>
+<fieldset data-role="controlgroup" data-mini="true">
+    <div class="ui-field-contain">
+      <label for="soberWord1" id="label_soberWord1">flippin:</label>
+      <input name="soberWord1" id="trans_soberWord1" placeholder="Enter Translation" value="flippin" data-mini="true" type="text" maxlength="16">
+    </div>
+    <div class="ui-field-contain">
+      <label for="soberWord2" id="label_soberWord2">frikken:</label>
+      <input name="soberWord2" id="trans_soberWord2" placeholder="Enter Translation" value="frikken" data-mini="true" type="text" maxlength="16">
+    </div>
+    <div class="ui-field-contain">
+      <label for="soberWord3" id="label_soberWord3">cluckin:</label>
+      <input name="soberWord3" id="trans_soberWord3" placeholder="Enter Translation" value="cluckin" data-mini="true" type="text" maxlength="16">
+    </div>
+    <div class="ui-field-contain">
+      <label for="soberWord4" id="label_soberWord4">bangin:</label>
+      <input name="soberWord4" id="trans_soberWord4" placeholder="Enter Translation" value="bangin" data-mini="true" type="text" maxlength="16">
+    </div>
+    <div class="ui-field-contain">
+      <label for="soberWord5" id="label_soberWord5">truckin:</label>
+      <input name="soberWord5" id="trans_soberWord5" placeholder="Enter Translation" value="truckin" data-mini="true" type="text" maxlength="16">
+    </div>
+    <div class="ui-field-contain">
+      <label for="soberWord6" id="label_soberWord6">crappin:</label>
+      <input name="soberWord6" id="trans_soberWord6" placeholder="Enter Translation" value="crappin" data-mini="true" type="text" maxlength="16">
+    </div>
+</fieldset>
+    
+        <h2>Tipsy</h2>
+<fieldset data-role="controlgroup" data-mini="true">
+    <div class="ui-field-contain">
+      <label for="tipsyWord1" id="label_tipsyWord1">shittin:</label>
+      <input name="tipsyWord1" id="trans_tipsyWord1" placeholder="Enter Translation" value="shittin" data-mini="true" type="text" maxlength="16">
+    </div>
+    <div class="ui-field-contain">
+      <label for="tipsyWord2" id="label_tipsyWord2">cocking:</label>
+      <input name="tipsyWord2" id="trans_tipsyWord2" placeholder="Enter Translation" value="cocking" data-mini="true" type="text" maxlength="16">
+    </div>
+    <div class="ui-field-contain">
+      <label for="tipsyWord3" id="label_tipsyWord3">twattin:</label>
+      <input name="tipsyWord3" id="trans_tipsyWord3" placeholder="Enter Translation" value="twattin" data-mini="true" type="text" maxlength="16">
+    </div>
+    <div class="ui-field-contain">
+      <label for="tipsyWord4" id="label_tipsyWord4">jizzing:</label>
+      <input name="tipsyWord4" id="trans_tipsyWord4" placeholder="Enter Translation" value="jizzing" data-mini="true" type="text" maxlength="16">
+    </div>
+    <div class="ui-field-contain">
+      <label for="tipsyWord5" id="label_tipsyWord5">pissing:</label>
+      <input name="tipsyWord5" id="trans_tipsyWord5" placeholder="Enter Translation" value="pissing" data-mini="true" type="text" maxlength="16">
+    </div>
+    <div class="ui-field-contain">
+      <label for="tipsyWord6" id="label_tipsyWord6">bastard:</label>
+      <input name="tipsyWord6" id="trans_tipsyWord6" placeholder="Enter Translation" value="bastard" data-mini="true" type="text" maxlength="16">
+    </div>
+</fieldset>
+    
+        <h2>Wasted</h2>
+<fieldset data-role="controlgroup" data-mini="true">
+    <div class="ui-field-contain">
+      <label for="wastedWord1" id="label_wastedWord1">fuckin:</label>
+      <input name="wastedWord1" id="trans_wastedWord1" placeholder="Enter Translation" value="fuckin" data-mini="true" type="text" maxlength="16">
+    </div>
+    <div class="ui-field-contain">
+      <label for="wastedWord2" id="label_wastedWord2">bitchin:</label>
+      <input name="wastedWord2" id="trans_wastedWord2" placeholder="Enter Translation" value="bitchin" data-mini="true" type="text" maxlength="16">
+    </div>
+    <div class="ui-field-contain">
+      <label for="wastedWord3" id="label_wastedWord3">shittin:</label>
+      <input name="wastedWord3" id="trans_wastedWord3" placeholder="Enter Translation" value="shittin" data-mini="true" type="text" maxlength="16">
+    </div>
+    <div class="ui-field-contain">
+      <label for="wastedWord4" id="label_wastedWord4">fisting:</label>
+      <input name="wastedWord4" id="trans_wastedWord4" placeholder="Enter Translation" value="fisting" data-mini="true" type="text" maxlength="16">
+    </div>
+    <div class="ui-field-contain">
+      <label for="wastedWord5" id="label_wastedWord5">friggin:</label>
+      <input name="wastedWord5" id="trans_wastedWord5" placeholder="Enter Translation" value="friggin" data-mini="true" type="text" maxlength="16">
+    </div>
+    <div class="ui-field-contain">
+      <label for="wastedWord6" id="label_wastedWord6">fuckity:</label>
+      <input name="wastedWord6" id="trans_wastedWord6" placeholder="Enter Translation" value="fuckity" data-mini="true" type="text" maxlength="16">
+    </div>
+</fieldset>
+    </div>
+
+        <div data-role="collapsible">
+        <h3>Other Translations</h3>
+<b>If you click a button below, all settings changed made on this page before hitting save on this page will be lost.<br></b>
+<form action="http://proyek.mudah.nya.goez.my.id/CoroWatch3/otaconf/bluetooth.xhtml">
+    <input type="submit" value="Bluetooth Phrases">
+</form>
+<form action="http://proyek.mudah.nya.goez.my.id/CoroWatch3/otaconf/slot.xhtml">
+    <input type="submit" value="Slot Words">
+</form>
+<br>
+<i>Separate pages are required to translate other phrases because there appears to be problems with sending a ton of data over to Pebble through iOS
+  all at once, so I am breaking it up into small pieces. Sorry for any troubles caused by this!</i>
+    </div>
+
+    <div data-role="collapsible">
+        <h3>Advanced</h3>
+
+<fieldset data-role="controlgroup" data-mini="true">
+    <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+    <legend>Discreet Alerts</legend>
+    <i>These alerts allow you to tell when the weather/settings/etc. has been updated. It's a small bar that goes away after 6 seconds.</i>
+        <input name="key35" id="key35-1" value="1" checked="checked" type="radio">
+        <label for="key35-1">On</label>
+        <input name="key35" id="key35-0" value="0" type="radio">
+        <label for="key35-0">Off</label>
+</fieldset>
+
+<p>
+Enjoy Drunk O' Clock, <blink>mother fucker :)
+</p>
+    </div>
+
+</div>
+<br />
+        <div class="ui-body ui-body-c">
+          <fieldset class="ui-grid-a">
+              <div class="ui-block-a"><button type="submit" data-theme="d" id="b-cancel">Cancel</button></div>
+              <div class="ui-block-b"><button type="submit" data-theme="a" id="b-submit">Save</button></div>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+    <script>
+
+      function saveOptions() {
+        var options = {
+              'wordpack':     Number( $("input[name=key1]:checked").val() ),
+              'progressive':     Number( $("input[name=key2]:checked").val() ),
+              'animation':     Number( $("input[name=key3]:checked").val() ),
+              'dateformat':     Number( $("input[name=key4]:checked").val() ),
+              'seconds':     Number( $("input[name=key5]:checked").val() ),
+              'shakeaction':     Number( $("input[name=key6]:checked").val() ),
+              'batterybar':     Number( $("input[name=key7]:checked").val() ),
+              'btrealert':     Number( $("input[name=key8]:checked").val() ),
+              'btdisalert':     Number( $("input[name=key9]:checked").val() ),
+              'bottomslot':     Number( $("input[name=key10]:checked").val() ),
+              'temppref':     Number( $("input[name=key12]:checked").val() ),
+              'alerts':     Number( $("input[name=key35]:checked").val() ),
+
+              //Sober
+              'soberWord1': $("input[name=soberWord1]").val(),
+              'soberWord2': $("input[name=soberWord2]").val(),
+              'soberWord3': $("input[name=soberWord3]").val(),
+              'soberWord4': $("input[name=soberWord4]").val(),
+              'soberWord5': $("input[name=soberWord5]").val(),
+              'soberWord6': $("input[name=soberWord6]").val(),
+
+              //Tipsy
+              'tipsyWord1': $("input[name=tipsyWord1]").val(),
+              'tipsyWord2': $("input[name=tipsyWord2]").val(),
+              'tipsyWord3': $("input[name=tipsyWord3]").val(),
+              'tipsyWord4': $("input[name=tipsyWord4]").val(),
+              'tipsyWord5': $("input[name=tipsyWord5]").val(),
+              'tipsyWord6': $("input[name=tipsyWord6]").val(),
+
+              //Wasted
+              'wastedWord1': $("input[name=wastedWord1]").val(),
+              'wastedWord2': $("input[name=wastedWord2]").val(),
+              'wastedWord3': $("input[name=wastedWord3]").val(),
+              'wastedWord4': $("input[name=wastedWord4]").val(),
+              'wastedWord5': $("input[name=wastedWord5]").val(),
+              'wastedWord6': $("input[name=wastedWord6]").val(),
+
+              //Other
+              'slotcustomtext': $("input[name=key11]").val(),
+              'customLoc': $("input[name=key13]").val(),
+              'updateFreq': $("input[name=updateFreqKey]").val(),
+          	  
+        }
+        return options;
+      }
+      $().ready(function() {
+       if (typeof window.localStorage !== "undefined") {
+       	console.log("Not undefined :)");
+        if (window.localStorage.pebble_drunkoclock2_options) {
+          ls_pto = JSON.parse(window.localStorage.pebble_drunkoclock2_options);
+          // the Pebble webview dies on the next line...
+          $("input[name=key1][id=key1-"+ls_pto["wordpack"]+"]").prop('checked',true);
+          $("input[name=key1]").checkboxradio('refresh');
+          $("input[name=key2][id=key2-"+ls_pto["progressive"]+"]").prop('checked',true);
+          $("input[name=key2]").checkboxradio('refresh');
+          $("input[name=key3][id=key3-"+ls_pto["animation"]+"]").prop('checked',true);
+          $("input[name=key3]").checkboxradio('refresh');
+          $("input[name=key4][id=key4-"+ls_pto["dateformat"]+"]").prop('checked',true);
+          $("input[name=key4]").checkboxradio('refresh');
+          $("input[name=key5][id=key5-"+ls_pto["seconds"]+"]").prop('checked',true);
+          $("input[name=key5]").checkboxradio('refresh');
+          $("input[name=key6][id=key6-"+ls_pto["shakeaction"]+"]").prop('checked',true);
+          $("input[name=key6]").checkboxradio('refresh');
+          $("input[name=key7][id=key7-"+ls_pto["batterybar"]+"]").prop('checked',true);
+          $("input[name=key7]").checkboxradio('refresh');
+          $("input[name=key8][id=key8-"+ls_pto["btrealert"]+"]").prop('checked',true);
+          $("input[name=key8]").checkboxradio('refresh');
+          $("input[name=key9][id=key9-"+ls_pto["btdisalert"]+"]").prop('checked',true);
+          $("input[name=key9]").checkboxradio('refresh');
+          $("input[name=key10][id=key10-"+ls_pto["bottomslot"]+"]").prop('checked',true);
+          $("input[name=key10]").checkboxradio('refresh');
+          $("input[name=key12][id=key12-"+ls_pto["temppref"]+"]").prop('checked',true);
+          $("input[name=key12]").checkboxradio('refresh');
+          $("input[name=key35][id=key35-"+ls_pto["alerts"]+"]").prop('checked',true);
+          $("input[name=key35]").checkboxradio('refresh');
+
+
+            //Sober
+            $("input[name=soberWord1]").val(ls_pto["soberWord1"]);
+            $("input[name=soberWord2]").val(ls_pto["soberWord2"]);
+            $("input[name=soberWord3]").val(ls_pto["soberWord3"]);
+            $("input[name=soberWord4]").val(ls_pto["soberWord4"]);
+            $("input[name=soberWord5]").val(ls_pto["soberWord5"]);
+            $("input[name=soberWord6]").val(ls_pto["soberWord6"]);
+            
+
+            //Tipsy
+            $("input[name=tipsyWord1]").val(ls_pto["tipsyWord1"]);
+            $("input[name=tipsyWord2]").val(ls_pto["tipsyWord2"]);
+            $("input[name=tipsyWord3]").val(ls_pto["tipsyWord3"]);
+            $("input[name=tipsyWord4]").val(ls_pto["tipsyWord4"]);
+            $("input[name=tipsyWord5]").val(ls_pto["tipsyWord5"]);
+            $("input[name=tipsyWord6]").val(ls_pto["tipsyWord6"]);
+
+            //Wasted
+            $("input[name=wastedWord1]").val(ls_pto["wastedWord1"]);
+            $("input[name=wastedWord2]").val(ls_pto["wastedWord2"]);
+            $("input[name=wastedWord3]").val(ls_pto["wastedWord3"]);
+            $("input[name=wastedWord4]").val(ls_pto["wastedWord4"]);
+            $("input[name=wastedWord5]").val(ls_pto["wastedWord5"]);
+            $("input[name=wastedWord6]").val(ls_pto["wastedWord6"]);
+            
+            //Other
+            $("input[name=key11]").val(ls_pto["slotcustomtext"]);
+            $("input[name=key13]").val(ls_pto["customLoc"]);
+            $("input[name=updateFreqKey]").val(ls_pto["updateFreq"]);
+        }
+       }
+        $("#b-cancel").click(function() {
+          console.log("Cancel");
+          document.location = "pebblejs://close";
+        });
+        $("#b-submit").click(function() {
+          console.log("Submit");
+          ls_pto = JSON.stringify(saveOptions());
+          if (typeof window.localStorage !== "undefined") {
+            window.localStorage.pebble_drunkoclock2_options = ls_pto;
+          }
+          var location = "pebblejs://close#" + encodeURIComponent(ls_pto);
+          console.log("Warping to: " + location);
+          console.log(location);
+          document.location = location;
+        });
+      });
+    </script>
+  </body>
+</html>

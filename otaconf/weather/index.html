@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cuaca</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <meta name="robots" content="noindex,follow">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  </head>
+  <body>
+    <div data-role="page" id="main">
+      <div data-role="header" class="jqm-header">
+        <h1>Kata² Cuaca</h1>
+      </div>
+
+      <div data-role="content">
+
+<div data-role="collapsible-set" data-theme="c" data-content-theme="d" data-mini="false">
+
+<i>Aku ora medeni, tapi lek samean ngatur iki sue, iso2 ora kesimpen..</i><br><br>
+
+<strong>Jo gawe karakter ngeneki yo: - _ . ! ~ * ' ( )</strong><br>
+         Ngatur iki ugo buak setelan gawane coro
+
+        <h2>Profil 1</h2>
+
+<fieldset data-role="controlgroup" data-mini="true">
+    <div class="ui-field-contain">
+      <label for="soberPhrase1" id="label_soberPhrase1">Badai:</label>
+      <input name="soberPhrase1" id="trans_soberPhrase1" placeholder="Gantine" value="Rodok badai dino iki" data-mini="true" type="text" maxlength="30">
+    </div>
+    <div class="ui-field-contain">
+      <label for="soberPhrase2" id="label_soberPhrase2">Gremis:</label>
+      <input name="soberPhrase2" id="trans_soberPhrase2" placeholder="Gantine" value="Adoh, Meh udan" data-mini="true" type="text" maxlength="30">
+    </div>
+    <div class="ui-field-contain">
+      <label for="soberPhrase3" id="label_soberPhrase3">Udan Deres:</label>
+      <input name="soberPhrase3" id="trans_soberPhrase3" placeholder="Gantine" value="Sem, Udane deres" data-mini="true" type="text" maxlength="30">
+    </div>
+    <div class="ui-field-contain">
+      <label for="soberPhrase4" id="label_soberPhrase4">Salju:</label>
+      <input name="soberPhrase4" id="trans_soberPhrase4" placeholder="Gantine" value="Wow, Kok iso salju" data-mini="true" type="text" maxlength="30">
+    </div>
+    <div class="ui-field-contain">
+      <label for="soberPhrase5" id="label_soberPhrase5">Kabut:</label>
+      <input name="soberPhrase5" id="trans_soberPhrase5" placeholder="Gantine" value="Rodok peteng mendunge" data-mini="true" type="text" maxlength="30">
+    </div>
+    <div class="ui-field-contain">
+      <label for="soberPhrase6" id="label_soberPhrase6">Cerah:</label>
+      <input name="soberPhrase6" id="trans_soberPhrase6" placeholder="Gantine" value="Wah, Dino apik" data-mini="true" type="text" maxlength="30">
+    </div>
+    <div class="ui-field-contain">
+      <label for="soberPhrase7" id="label_soberPhrase7">Berawan:</label>
+      <input name="soberPhrase7" id="trans_soberPhrase7" placeholder="Gantine" value="Beh, Akeh awane" data-mini="true" type="text" maxlength="30">
+    </div>
+    <div class="ui-field-contain">
+      <label for="soberPhrase8" id="label_soberPhrase8">Mendung:</label>
+      <input name="soberPhrase8" id="trans_soberPhrase8" placeholder="Gantine" value="Mendung, cuog deh" data-mini="true" type="text" maxlength="30">
+    </div>
+</fieldset>
+
+<!--
+		"Owh", "Cuog", "Ew", "Sip", "Cik", "Lha"
+  -->
+    <!-- beta 
+        <h2>Tipsy</h2>
+<fieldset data-role="controlgroup" data-mini="true">
+    <div class="ui-field-contain">
+      <label for="tipsyPhrase1" id="label_tipsyPhrase1">Storms:</label>
+      <input name="tipsyPhrase1" id="trans_tipsyPhrase1" placeholder="Gantine" value="Aw shit, storms" data-mini="true" type="text" maxlength="30">
+    </div>
+    <div class="ui-field-contain">
+      <label for="tipsyPhrase2" id="label_tipsyPhrase2">Light Rain:</label>
+      <input name="tipsyPhrase2" id="trans_tipsyPhrase2" placeholder="Gantine" value="Cocking rain showers" data-mini="true" type="text" maxlength="30">
+    </div>
+    <div class="ui-field-contain">
+      <label for="tipsyPhrase3" id="label_tipsyPhrase3">Heavy Rain:</label>
+      <input name="tipsyPhrase3" id="trans_tipsyPhrase3" placeholder="Gantine" value="Pissing it down" data-mini="true" type="text" maxlength="30">
+    </div>
+    <div class="ui-field-contain">
+      <label for="tipsyPhrase4" id="label_tipsyPhrase4">Snow:</label>
+      <input name="tipsyPhrase4" id="trans_tipsyPhrase4" placeholder="Gantine" value="Snow, you Canadian" data-mini="true" type="text" maxlength="30">
+    </div>
+    <div class="ui-field-contain">
+      <label for="tipsyPhrase5" id="label_tipsyPhrase5">Fog:</label>
+      <input name="tipsyPhrase5" id="trans_tipsyPhrase5" placeholder="Gantine" value="Can't see shit" data-mini="true" type="text" maxlength="30">
+    </div>
+    <div class="ui-field-contain">
+      <label for="tipsyPhrase6" id="label_tipsyPhrase6">Clear:</label>
+      <input name="tipsyPhrase6" id="trans_tipsyPhrase6" placeholder="Gantine" value="Nice day, dick" data-mini="true" type="text" maxlength="30">
+    </div>
+    <div class="ui-field-contain">
+      <label for="tipsyPhrase7" id="label_tipsyPhrase7">Cloudy:</label>
+      <input name="tipsyPhrase7" id="trans_tipsyPhrase7" placeholder="Gantine" value="Few wanky clouds" data-mini="true" type="text" maxlength="30">
+    </div>
+    <div class="ui-field-contain">
+      <label for="tipsyPhrase8" id="label_tipsyPhrase8">Overcast:</label>
+      <input name="tipsyPhrase8" id="trans_tipsyPhrase8" placeholder="Gantine" value="Holy shit, overcast" data-mini="true" type="text" maxlength="30">
+    </div>
+</fieldset> 
+
+
+        <h2>Wasted</h2>
+<fieldset data-role="controlgroup" data-mini="true">
+    <div class="ui-field-contain">
+      <label for="wastedPhrase1" id="label_wastedPhrase1">Storms:</label>
+      <input name="wastedPhrase1" id="trans_wastedPhrase1" placeholder="Gantine" value="FUCK! Thunderstorms" data-mini="true" type="text" maxlength="30">
+    </div>
+    <div class="ui-field-contain">
+      <label for="wastedPhrase2" id="label_wastedPhrase2">Light Rain:</label>
+      <input name="wastedPhrase2" id="trans_wastedPhrase2" placeholder="Gantine" value="Drizzle of shit" data-mini="true" type="text" maxlength="30">
+    </div>
+    <div class="ui-field-contain">
+      <label for="wastedPhrase3" id="label_wastedPhrase3">Heavy Rain:</label>
+      <input name="wastedPhrase3" id="trans_wastedPhrase3" placeholder="Gantine" value="Wow, fucking rain" data-mini="true" type="text" maxlength="30">
+    </div>
+    <div class="ui-field-contain">
+      <label for="wastedPhrase4" id="label_wastedPhrase4">Snow:</label>
+      <input name="wastedPhrase4" id="trans_wastedPhrase4" placeholder="Gantine" value="Fucking Canadian, snow" data-mini="true" type="text" maxlength="30">
+    </div>
+    <div class="ui-field-contain">
+      <label for="wastedPhrase5" id="label_wastedPhrase5">Fog:</label>
+      <input name="wastedPhrase5" id="trans_wastedPhrase5" placeholder="Gantine" value="Shitty ass mist" data-mini="true" type="text" maxlength="30">
+    </div>
+    <div class="ui-field-contain">
+      <label for="wastedPhrase6" id="label_wastedPhrase6">Clear:</label>
+      <input name="wastedPhrase6" id="trans_wastedPhrase6" placeholder="Gantine" value="Shit's fucking clear" data-mini="true" type="text" maxlength="30">
+    </div>
+    <div class="ui-field-contain">
+      <label for="wastedPhrase7" id="label_wastedPhrase7">Cloudy:</label>
+      <input name="wastedPhrase7" id="trans_wastedPhrase7" placeholder="Gantine" value="Fuck these clouds" data-mini="true" type="text" maxlength="30">
+    </div>
+    <div class="ui-field-contain">
+      <label for="wastedPhrase8" id="label_wastedPhrase8">Overcast:</label>
+      <input name="wastedPhrase8" id="trans_wastedPhrase8" placeholder="Gantine" value="Overcast you limey" data-mini="true" type="text" maxlength="30">
+    </div>
+</fieldset>
+-->
+</div>
+<br />
+        <div class="ui-body ui-body-c">
+          <fieldset class="ui-grid-a">
+              <div class="ui-block-a"><button type="submit" data-theme="d" id="b-cancel">Rasido</button></div>
+              <div class="ui-block-b"><button type="submit" data-theme="a" id="b-submit">Simpen</button></div>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+    <script>
+      function saveOptions() {
+        var options = {
+              //Sober
+              'soberPhrase1': $("input[name=soberPhrase1]").val(),
+              'soberPhrase2': $("input[name=soberPhrase2]").val(),
+              'soberPhrase3': $("input[name=soberPhrase3]").val(),
+              'soberPhrase4': $("input[name=soberPhrase4]").val(),
+              'soberPhrase5': $("input[name=soberPhrase5]").val(),
+              'soberPhrase6': $("input[name=soberPhrase6]").val(),
+              'soberPhrase7': $("input[name=soberPhrase7]").val(),
+              'soberPhrase8': $("input[name=soberPhrase8]").val(),
+
+              //Tipsy
+              'tipsyPhrase1': $("input[name=tipsyPhrase1]").val(),
+              'tipsyPhrase2': $("input[name=tipsyPhrase2]").val(),
+              'tipsyPhrase3': $("input[name=tipsyPhrase3]").val(),
+              'tipsyPhrase4': $("input[name=tipsyPhrase4]").val(),
+              'tipsyPhrase5': $("input[name=tipsyPhrase5]").val(),
+              'tipsyPhrase6': $("input[name=tipsyPhrase6]").val(),
+              'tipsyPhrase7': $("input[name=tipsyPhrase7]").val(),
+              'tipsyPhrase8': $("input[name=tipsyPhrase8]").val(),
+
+              //Wasted
+              'wastedPhrase1': $("input[name=wastedPhrase1]").val(),
+              'wastedPhrase2': $("input[name=wastedPhrase2]").val(),
+              'wastedPhrase3': $("input[name=wastedPhrase3]").val(),
+              'wastedPhrase4': $("input[name=wastedPhrase4]").val(),
+              'wastedPhrase5': $("input[name=wastedPhrase5]").val(),
+              'wastedPhrase6': $("input[name=wastedPhrase6]").val(),
+              'wastedPhrase7': $("input[name=wastedPhrase7]").val(),
+              'wastedPhrase8': $("input[name=wastedPhrase8]").val(),
+          	  
+        }
+        return options;
+      }
+      $().ready(function() {
+       if (typeof window.localStorage !== "undefined") {
+       	console.log("Not undefined :)");
+        if (window.localStorage.pebble_doc2_weather_options) {
+          ls_pto = JSON.parse(window.localStorage.pebble_doc2_weather_options);
+
+
+            //Sober
+            $("input[name=soberPhrase1]").val(ls_pto["soberPhrase1"]);
+            $("input[name=soberPhrase2]").val(ls_pto["soberPhrase2"]);
+            $("input[name=soberPhrase3]").val(ls_pto["soberPhrase3"]);
+            $("input[name=soberPhrase4]").val(ls_pto["soberPhrase4"]);
+            $("input[name=soberPhrase5]").val(ls_pto["soberPhrase5"]);
+            $("input[name=soberPhrase6]").val(ls_pto["soberPhrase6"]);
+            $("input[name=soberPhrase7]").val(ls_pto["soberPhrase7"]);
+            $("input[name=soberPhrase8]").val(ls_pto["soberPhrase8"]);
+
+            //Tipsy
+            $("input[name=tipsyPhrase1]").val(ls_pto["tipsyPhrase1"]);
+            $("input[name=tipsyPhrase2]").val(ls_pto["tipsyPhrase2"]);
+            $("input[name=tipsyPhrase3]").val(ls_pto["tipsyPhrase3"]);
+            $("input[name=tipsyPhrase4]").val(ls_pto["tipsyPhrase4"]);
+            $("input[name=tipsyPhrase5]").val(ls_pto["tipsyPhrase5"]);
+            $("input[name=tipsyPhrase6]").val(ls_pto["tipsyPhrase6"]);
+            $("input[name=tipsyPhrase7]").val(ls_pto["tipsyPhrase7"]);
+            $("input[name=tipsyPhrase8]").val(ls_pto["tipsyPhrase8"]);
+
+            //Wasted
+            $("input[name=wastedPhrase1]").val(ls_pto["wastedPhrase1"]);
+            $("input[name=wastedPhrase2]").val(ls_pto["wastedPhrase2"]);
+            $("input[name=wastedPhrase3]").val(ls_pto["wastedPhrase3"]);
+            $("input[name=wastedPhrase4]").val(ls_pto["wastedPhrase4"]);
+            $("input[name=wastedPhrase5]").val(ls_pto["wastedPhrase5"]);
+            $("input[name=wastedPhrase6]").val(ls_pto["wastedPhrase6"]);
+            $("input[name=wastedPhrase7]").val(ls_pto["wastedPhrase7"]);
+            $("input[name=wastedPhrase8]").val(ls_pto["wastedPhrase8"]);
+        }
+       }
+        $("#b-cancel").click(function() {
+          console.log("Cancel");
+          document.location = "pebblejs://close";
+        });
+        $("#b-submit").click(function() {
+          console.log("Submit");
+          ls_pto = JSON.stringify(saveOptions());
+          if (typeof window.localStorage !== "undefined") {
+            window.localStorage.pebble_doc2_weather_options = ls_pto;
+          }
+          var location = "pebblejs://close#" + encodeURIComponent(ls_pto);
+          console.log("Warping to: " + location);
+          console.log(location);
+          document.location = location;
+        });
+      });
+    </script>
+  </body>
+</html>
