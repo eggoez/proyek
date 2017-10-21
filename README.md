@@ -2,7 +2,7 @@
 
 ![](https://img.shields.io/badge/pro-yek-green.svg)
 ![](https://img.shields.io/badge/mudah-nya-brightgreen.svg)
-![](https://img.shields.io/badge/l/goez-new-serialize.svg)
+![](https://img.shields.io/badge/goez-new-serialize.svg)
 [![](https://img.shields.io/twitter/follow/eggoez.svg?style=social)](https://twitter.com/eggoez)
 
 ## Informations
